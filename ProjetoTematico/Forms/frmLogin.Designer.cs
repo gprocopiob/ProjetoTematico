@@ -45,7 +45,7 @@
             this.btnLogin.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.PanWest;
             this.btnLogin.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLogin.Location = new System.Drawing.Point(179, 154);
+            this.btnLogin.Location = new System.Drawing.Point(178, 154);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(96, 37);
             this.btnLogin.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             this.txbEmail.BackColor = System.Drawing.Color.White;
             this.txbEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txbEmail.Location = new System.Drawing.Point(132, 55);
+            this.txbEmail.Location = new System.Drawing.Point(131, 58);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(224, 22);
             this.txbEmail.TabIndex = 1;
@@ -65,7 +65,7 @@
             // txbSenha
             // 
             this.txbSenha.BackColor = System.Drawing.Color.White;
-            this.txbSenha.Location = new System.Drawing.Point(132, 110);
+            this.txbSenha.Location = new System.Drawing.Point(131, 113);
             this.txbSenha.Name = "txbSenha";
             this.txbSenha.Size = new System.Drawing.Size(224, 22);
             this.txbSenha.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(129, 35);
+            this.label1.Location = new System.Drawing.Point(128, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 3;
@@ -85,7 +85,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(129, 90);
+            this.label2.Location = new System.Drawing.Point(128, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 4;
@@ -95,7 +95,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(131, 211);
+            this.label3.Location = new System.Drawing.Point(130, 211);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 16);
             this.label3.TabIndex = 5;
@@ -106,7 +106,7 @@
             this.btnCadastro.AutoSize = true;
             this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastro.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnCadastro.Location = new System.Drawing.Point(250, 211);
+            this.btnCadastro.Location = new System.Drawing.Point(248, 211);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(81, 16);
             this.btnCadastro.TabIndex = 6;
@@ -116,9 +116,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(33, 55);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 55);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(82, 77);
+            this.pictureBox1.Size = new System.Drawing.Size(90, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
