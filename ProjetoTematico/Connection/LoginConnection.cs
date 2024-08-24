@@ -21,7 +21,6 @@ namespace ProjetoTematico.MSSQL
 
             if (ConnectionString != null)
             {
-
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
                     string query = "SELECT COUNT(*) FROM CADASTRO WHERE EMAIL = @Email AND SENHA = @Senha";
