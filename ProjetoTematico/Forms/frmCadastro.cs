@@ -16,5 +16,19 @@ namespace ProjetoTematico.Forms
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            frmLogin frmLogin = new frmLogin();
+
+            frmLogin.ShowDialog();
+        }
+
+        private void frmCadastro_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.exit
+        }
     }
 }

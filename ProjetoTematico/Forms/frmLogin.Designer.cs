@@ -43,11 +43,13 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.PanWest;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLogin.Location = new System.Drawing.Point(178, 154);
+            this.btnLogin.Location = new System.Drawing.Point(200, 135);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(96, 37);
+            this.btnLogin.Size = new System.Drawing.Size(127, 37);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -57,47 +59,54 @@
             // 
             this.txbEmail.BackColor = System.Drawing.Color.White;
             this.txbEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txbEmail.Location = new System.Drawing.Point(131, 58);
+            this.txbEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txbEmail.Location = new System.Drawing.Point(127, 46);
+            this.txbEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(224, 22);
+            this.txbEmail.Size = new System.Drawing.Size(299, 27);
             this.txbEmail.TabIndex = 1;
             // 
             // txbSenha
             // 
             this.txbSenha.BackColor = System.Drawing.Color.White;
-            this.txbSenha.Location = new System.Drawing.Point(131, 113);
+            this.txbSenha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSenha.Location = new System.Drawing.Point(127, 97);
+            this.txbSenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbSenha.Name = "txbSenha";
-            this.txbSenha.Size = new System.Drawing.Size(224, 22);
+            this.txbSenha.Size = new System.Drawing.Size(299, 27);
             this.txbSenha.TabIndex = 2;
             this.txbSenha.UseSystemPasswordChar = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(128, 38);
+            this.label1.Location = new System.Drawing.Point(124, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Email:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(128, 93);
+            this.label2.Location = new System.Drawing.Point(124, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
+            this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Senha:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(130, 211);
+            this.label3.Location = new System.Drawing.Point(173, 185);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 16);
+            this.label3.Size = new System.Drawing.Size(128, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Não possui login?";
             // 
@@ -105,10 +114,11 @@
             // 
             this.btnCadastro.AutoSize = true;
             this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastro.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCadastro.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnCadastro.Location = new System.Drawing.Point(248, 211);
+            this.btnCadastro.Location = new System.Drawing.Point(272, 185);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(81, 16);
+            this.btnCadastro.Size = new System.Drawing.Size(87, 20);
             this.btnCadastro.TabIndex = 6;
             this.btnCadastro.Text = "Cadastre-se";
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
@@ -116,19 +126,20 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(26, 55);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(397, 257);
+            this.ClientSize = new System.Drawing.Size(452, 220);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCadastro);
@@ -137,7 +148,9 @@
             this.Controls.Add(this.txbSenha);
             this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.btnLogin);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NutriFlow";
