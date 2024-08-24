@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace ProjetoTematico
 {
-    public static class ControlUtils // Certifique-se de que a classe é pública
+    public class ControlUtils
     {
         public static void ClearControls(params Control[] controls)
         {
@@ -39,6 +39,17 @@ namespace ProjetoTematico
                         break;
                 }
             }
+        }
+
+        public static void ShowAndCloseForm(Form currentForm, Type newFormType)
+        {
+            Form newForm = (Form)Activator.CreateInstance(newFormType);
+
+            currentForm.Hide();
+
+            newForm.ShowDialog();
+
+            currentForm.Close();
         }
     }
 }

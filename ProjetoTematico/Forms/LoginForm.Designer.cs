@@ -1,6 +1,6 @@
 ﻿namespace ProjetoTematico
 {
-    partial class frmLogin
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.btnLogin = new System.Windows.Forms.Button();
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.txbSenha = new System.Windows.Forms.TextBox();
@@ -58,7 +58,6 @@
             // txbEmail
             // 
             this.txbEmail.BackColor = System.Drawing.Color.White;
-            this.txbEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txbEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txbEmail.Location = new System.Drawing.Point(127, 46);
             this.txbEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -76,6 +75,7 @@
             this.txbSenha.Size = new System.Drawing.Size(299, 27);
             this.txbSenha.TabIndex = 2;
             this.txbSenha.UseSystemPasswordChar = true;
+            this.txbSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbSenha_KeyDown);
             // 
             // label1
             // 
@@ -134,7 +134,7 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // frmLogin
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,10 +151,9 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmLogin";
+            this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NutriFlow";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

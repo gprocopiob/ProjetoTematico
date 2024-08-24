@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoTematico.Forms
 {
-    public partial class frmCadastro : Form
+    public partial class CadastroForm : Form
     {
-        public frmCadastro()
+        public CadastroForm()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace ProjetoTematico.Forms
         {
             this.Hide();
 
-            frmLogin frmLogin = new frmLogin();
+            LoginForm frmLogin = new LoginForm();
 
             frmLogin.ShowDialog();
         }

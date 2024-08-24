@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NutriFlow.Forms
 {
-    public partial class frmMenu : Form
+    public partial class MenuForm : Form
     {
-        public frmMenu()
+        public MenuForm()
         {
             InitializeComponent();
         }

@@ -30,10 +30,10 @@ namespace ProjetoTematico.MSSQL
 
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
                 {
-                    string query = "SELECT COUNT(*) FROM CADASTRO WHERE Email = @Email AND Senha = @Senha";
+                    string query = "SELECT COUNT(*) FROM CADASTRO WHERE email = @Email AND Senha = @Senha";
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@email", email.ToUpper());
-                    cmd.Parameters.AddWithValue("@senha", senha);
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Senha", senha);
 
                     conn.Open();
                     int count = (int)cmd.ExecuteScalar();
