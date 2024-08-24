@@ -24,7 +24,7 @@ namespace ProjetoTematico.MSSQL
 
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
-                    string query = "SELECT COUNT(*) FROM CADASTRO WHERE email = @Email AND Senha = @Senha";
+                    string query = "SELECT COUNT(*) FROM CADASTRO WHERE EMAIL = @Email AND SENHA = @Senha";
                     SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@Email", email);
                     cmd.Parameters.AddWithValue("@Senha", senha);

@@ -25,7 +25,7 @@ namespace NutriFlow.Connection
             {
                 bool success = false;
 
-                string query = "INSERT INTO CADASTRO (ID, Nome, Sobrenome, Genero, Email, Senha) VALUES (@id, @nome, @sobrenome, @genero, @email, @senha)";
+                string query = "INSERT INTO CADASTRO (ID, NOME, SOBRENOME, GENERO, EMAIL, SENHA) VALUES (@id, @nome, @sobrenome, @genero, @email, @senha)";
 
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
