@@ -1,20 +1,14 @@
 ﻿using NutriFlow.Connection;
-using System;
-using System.Collections.Generic;
-using System.Data.Common;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoTematico.MSSQL
 {
-    internal class ConnectionLogin
+    internal class LoginConnection
     {
         public Connection Connection { get; private set; }
         public string ConnectionString { get; private set; }
 
-        public ConnectionLogin()
+        public LoginConnection()
         {
             Connection = new Connection();
 
@@ -28,14 +22,14 @@ namespace ProjetoTematico.MSSQL
             if (ConnectionString != null)
             {
 
-                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
                     string query = "SELECT COUNT(*) FROM CADASTRO WHERE email = @Email AND Senha = @Senha";
-                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@Email", email);
                     cmd.Parameters.AddWithValue("@Senha", senha);
 
-                    conn.Open();
+                    connection.Open();
                     int count = (int)cmd.ExecuteScalar();
                     loginSuccessful = count > 0;
                 }

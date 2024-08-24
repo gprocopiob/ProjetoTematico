@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection\CadastroConnection.cs" />
     <Compile Include="Connection\Connection.cs" />
     <Compile Include="ControlUtils.cs" />
     <Compile Include="Forms\CadastroForm.cs">
@@ -67,15 +68,17 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connection\ConnectionLogin.cs" />
+    <Compile Include="Connection\LoginConnection.cs" />
     <Compile Include="Forms\MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Objects\UserObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation\CadastroValidation.cs" />
     <Compile Include="Validation\LoginValidation.cs" />
     <EmbeddedResource Include="Forms\CadastroForm.resx">
       <DependentUpon>CadastroForm.cs</DependentUpon>

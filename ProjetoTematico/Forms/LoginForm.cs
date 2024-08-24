@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Windows.Forms;
 using NutriFlow.Forms;
 using NutriFlow.Validation;
+using System.Windows.Forms;
 using ProjetoTematico.Forms;
 using ProjetoTematico.MSSQL;
 
@@ -9,7 +9,7 @@ namespace ProjetoTematico
 {
     public partial class LoginForm : Form
     {
-        private ConnectionLogin Connection = new ConnectionLogin();
+        private LoginConnection Connection = new LoginConnection();
         private LoginValidation Validation = new LoginValidation();
 
         public LoginForm()
@@ -25,7 +25,7 @@ namespace ProjetoTematico
         }
 
         private void btnCadastro_Click(object sender, EventArgs e)
-        {            
+        {
             CadastroForm Cadastro = new CadastroForm();
 
             ControlUtils.ShowAndCloseForm(this, typeof(CadastroForm));
@@ -40,7 +40,7 @@ namespace ProjetoTematico
                 e.SuppressKeyPress = true;
             }
         }
-                private void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             {
                 string email = txbEmail.Text.ToUpper();
@@ -52,14 +52,13 @@ namespace ProjetoTematico
                 }
                 else if (!Validation.IsValidEmail(email))
                 {
-
                     SetLoginInvalido("Email Inválido");
                 }
                 else
                 {
                     try
                     {
-                        ConnectionLogin conLogin = new ConnectionLogin();
+                        LoginConnection conLogin = new LoginConnection();
 
                         bool loginSuccessful = conLogin.Login(email, password);
 
@@ -81,6 +80,11 @@ namespace ProjetoTematico
             ControlUtils.ClearControls(txbEmail, txbSenha);
 
             MessageBox.Show($"{message}", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
