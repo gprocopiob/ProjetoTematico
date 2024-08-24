@@ -30,5 +30,34 @@ namespace ProjetoTematico.Forms
         {
             Application.Exit();
         }
+
+        private void txbConfirmacaoSenha_KeyUp(object sender, KeyEventArgs e)
+        {
+            VerifyPassword();
+        }
+
+        private void txbSenha_KeyUp(object sender, KeyEventArgs e)
+        {
+            VerifyPassword();
+        }
+
+        private void VerifyPassword()
+        {
+            string pwd1 = txbSenha.Text;
+            string pwd2 = txbConfirmacaoSenha.Text;
+
+            if (pwd1 == pwd2)
+            {
+                lblStatus.Text = "Senhas coincidentes";
+                lblStatus.ForeColor = Color.Green;
+                btnCadastrar.Enabled = true;
+            }
+            else
+            {
+                lblStatus.Text = "As senhas não coincidem";
+                lblStatus.ForeColor = Color.Red;
+                btnCadastrar.Enabled = false;
+            }
+        }
     }
 }
