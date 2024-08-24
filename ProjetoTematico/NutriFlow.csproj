@@ -53,27 +53,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection\CadastroConnection.cs" />
+    <Compile Include="Connection\Connection.cs" />
     <Compile Include="ControlUtils.cs" />
-    <Compile Include="Forms\frmCadastro.cs">
+    <Compile Include="Forms\CadastroForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmCadastro.Designer.cs">
-      <DependentUpon>frmCadastro.cs</DependentUpon>
+    <Compile Include="Forms\CadastroForm.Designer.cs">
+      <DependentUpon>CadastroForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmLogin.cs">
+    <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connection\ConnectionLogin.cs" />
+    <Compile Include="Connection\LoginConnection.cs" />
+    <Compile Include="Forms\MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\UserObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\frmCadastro.resx">
-      <DependentUpon>frmCadastro.cs</DependentUpon>
+    <Compile Include="Validation\CadastroValidation.cs" />
+    <Compile Include="Validation\LoginValidation.cs" />
+    <EmbeddedResource Include="Forms\CadastroForm.resx">
+      <DependentUpon>CadastroForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Utils\Logo_UCS_Vertical_PNG.ico" />
+    <Content Include="Utils\ScriptSQL.txt" />
     <Content Include="Utils\user.png" />
   </ItemGroup>
   <ItemGroup />
