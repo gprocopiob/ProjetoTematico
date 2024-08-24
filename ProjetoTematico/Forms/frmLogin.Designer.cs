@@ -45,7 +45,7 @@
             this.btnLogin.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.PanWest;
             this.btnLogin.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLogin.Location = new System.Drawing.Point(179, 153);
+            this.btnLogin.Location = new System.Drawing.Point(179, 154);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(96, 37);
             this.btnLogin.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             this.txbEmail.BackColor = System.Drawing.Color.White;
             this.txbEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txbEmail.Location = new System.Drawing.Point(126, 55);
+            this.txbEmail.Location = new System.Drawing.Point(132, 55);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(224, 22);
             this.txbEmail.TabIndex = 1;
@@ -65,7 +65,7 @@
             // txbSenha
             // 
             this.txbSenha.BackColor = System.Drawing.Color.White;
-            this.txbSenha.Location = new System.Drawing.Point(126, 110);
+            this.txbSenha.Location = new System.Drawing.Point(132, 110);
             this.txbSenha.Name = "txbSenha";
             this.txbSenha.Size = new System.Drawing.Size(224, 22);
             this.txbSenha.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(123, 35);
+            this.label1.Location = new System.Drawing.Point(129, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 3;
@@ -85,7 +85,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(123, 90);
+            this.label2.Location = new System.Drawing.Point(129, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 4;
