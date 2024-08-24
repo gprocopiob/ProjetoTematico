@@ -43,7 +43,7 @@
             this.btnLogin.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.PanWest;
             this.btnLogin.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLogin.Location = new System.Drawing.Point(128, 154);
+            this.btnLogin.Location = new System.Drawing.Point(127, 154);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(96, 37);
             this.btnLogin.TabIndex = 0;
