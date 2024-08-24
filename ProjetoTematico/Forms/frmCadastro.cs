@@ -28,7 +28,7 @@ namespace ProjetoTematico.Forms
 
         private void frmCadastro_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.exit
+            Application.Exit();
         }
     }
 }
