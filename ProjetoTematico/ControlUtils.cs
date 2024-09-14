@@ -51,5 +51,11 @@ namespace ProjetoTematico
 
             currentForm.Close();
         }
+
+        public static void ShowPanelBotoes(PictureBox pbx, bool visible, Panel pnl)
+        {
+            pbx.Visible = visible;
+            pnl.Visible = !visible;
+        }
     }
 }

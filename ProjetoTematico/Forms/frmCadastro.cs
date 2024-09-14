@@ -12,11 +12,6 @@ namespace ProjetoTematico.Forms
     {
         private ConnectionCadastro Connection = new ConnectionCadastro();
         private ValidationCadastro Validation = new ValidationCadastro();
-        public Button BtnVoltar;
-        public Button BtnVoltarr
-        {
-            get { return btnVoltar; }
-        }
 
         public frmCadastro()
         {

@@ -76,6 +76,12 @@
     <Compile Include="Forms\frmCadastro.Designer.cs">
       <DependentUpon>frmCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmExercicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExercicio.Designer.cs">
+      <DependentUpon>frmExercicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Validation\ValidationLogin.cs" />
     <EmbeddedResource Include="Forms\frmCadastro.resx">
       <DependentUpon>frmCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExercicio.resx">
+      <DependentUpon>frmExercicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -128,10 +137,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo_UCS_Vertical_PNG.ico" />
-    <Content Include="Utils\edit.ico" />
+    <Content Include="Utils\logo_planejamento.png" />
     <Content Include="Utils\logo_menu.png" />
     <Content Include="Utils\logo_registro.png" />
-    <Content Include="Utils\Logo_UCS_Vertical_PNG.ico" />
+    <Content Include="Utils\logo_UCS.ico" />
     <Content Include="Utils\ScriptSQL.txt" />
     <Content Include="Utils\user.png" />
   </ItemGroup>
