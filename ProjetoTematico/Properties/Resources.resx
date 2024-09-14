@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ConnectionGabriela" xml:space="preserve">
-    <value>Server=localhost\SQLEXPRESS;Database=NUTRIFLOW;Trusted_Connection=True;</value>
-  </data>
-  <data name="ConnectionLuca" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ConnectionMatheus" xml:space="preserve">
-    <value>0</value>
-  </data>
 </root>

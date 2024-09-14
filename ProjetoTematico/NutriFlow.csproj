@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>Logo_UCS_Vertical_PNG.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>ProjetoTematico.Program</StartupObject>
@@ -53,41 +67,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connection\CadastroConnection.cs" />
+    <Compile Include="Connection\ConnectionCadastro.cs" />
     <Compile Include="Connection\Connection.cs" />
     <Compile Include="ControlUtils.cs" />
-    <Compile Include="Forms\CadastroForm.cs">
+    <Compile Include="Forms\frmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CadastroForm.Designer.cs">
-      <DependentUpon>CadastroForm.cs</DependentUpon>
+    <Compile Include="Forms\frmCadastro.Designer.cs">
+      <DependentUpon>frmCadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoginForm.cs">
+    <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connection\LoginConnection.cs" />
-    <Compile Include="Forms\MenuForm.cs">
+    <Compile Include="Connection\ConnectionLogin.cs" />
+    <Compile Include="Forms\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MenuForm.Designer.cs">
-      <DependentUpon>MenuForm.cs</DependentUpon>
+    <Compile Include="Forms\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Objects\UserObject.cs" />
+    <Compile Include="Objects\ObjectUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validation\CadastroValidation.cs" />
-    <Compile Include="Validation\LoginValidation.cs" />
-    <EmbeddedResource Include="Forms\CadastroForm.resx">
-      <DependentUpon>CadastroForm.cs</DependentUpon>
+    <Compile Include="Validation\ValidationCadastro.cs" />
+    <Compile Include="Validation\ValidationLogin.cs" />
+    <EmbeddedResource Include="Forms\frmCadastro.resx">
+      <DependentUpon>frmCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MenuForm.resx">
-      <DependentUpon>MenuForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -113,10 +127,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Logo_UCS_Vertical_PNG.ico" />
+    <Content Include="Utils\edit.ico" />
+    <Content Include="Utils\logo_menu.png" />
+    <Content Include="Utils\logo_registro.png" />
     <Content Include="Utils\Logo_UCS_Vertical_PNG.ico" />
     <Content Include="Utils\ScriptSQL.txt" />
     <Content Include="Utils\user.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

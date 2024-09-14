@@ -59,32 +59,5 @@ namespace NutriFlow.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Server=localhost\SQLEXPRESS;Database=NUTRIFLOW;Trusted_Connection=True;.
-        /// </summary>
-        internal static string ConnectionGabriela {
-            get {
-                return ResourceManager.GetString("ConnectionGabriela", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 0.
-        /// </summary>
-        internal static string ConnectionLuca {
-            get {
-                return ResourceManager.GetString("ConnectionLuca", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 0.
-        /// </summary>
-        internal static string ConnectionMatheus {
-            get {
-                return ResourceManager.GetString("ConnectionMatheus", resourceCulture);
-            }
-        }
     }
 }

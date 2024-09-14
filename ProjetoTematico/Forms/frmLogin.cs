@@ -1,18 +1,18 @@
 ﻿using System;
 using NutriFlow.Forms;
-using NutriFlow.Validation;
 using System.Windows.Forms;
+using NutriFlow.Validation;
 using ProjetoTematico.Forms;
 using ProjetoTematico.MSSQL;
 
 namespace ProjetoTematico
 {
-    public partial class LoginForm : Form
+    public partial class frmLogin : Form
     {
-        private LoginConnection Connection = new LoginConnection();
-        private LoginValidation Validation = new LoginValidation();
+        private ConnectionLogin Connection = new ConnectionLogin();
+        private ValidationLogin Validation = new ValidationLogin();
 
-        public LoginForm()
+        public frmLogin()
         {
             InitializeComponent();
 
@@ -26,9 +26,7 @@ namespace ProjetoTematico
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            CadastroForm Cadastro = new CadastroForm();
-
-            ControlUtils.ShowAndCloseForm(this, typeof(CadastroForm));
+            ControlUtils.ShowAndCloseForm(this, typeof(frmCadastro));
         }
 
         private void txbSenha_KeyDown(object sender, KeyEventArgs e)
@@ -58,13 +56,17 @@ namespace ProjetoTematico
                 {
                     try
                     {
-                        LoginConnection conLogin = new LoginConnection();
+                        ConnectionLogin conLogin = new ConnectionLogin();
 
                         bool loginSuccessful = conLogin.Login(email, password);
 
                         if (loginSuccessful)
                         {
-                            ControlUtils.ShowAndCloseForm(this, typeof(MenuForm));
+                            ControlUtils.ShowAndCloseForm(this, typeof(frmMenu));
+                        }
+                        else
+                        {
+                            SetLoginInvalido("Login inválido");
                         }
                     }
                     catch (Exception ex)
@@ -84,7 +86,7 @@ namespace ProjetoTematico
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+            ControlUtils.ShowAndCloseForm(this, typeof(frmMenu));
         }
     }
 }

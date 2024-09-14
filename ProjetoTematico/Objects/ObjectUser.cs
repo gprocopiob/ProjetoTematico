@@ -1,6 +1,6 @@
 ﻿namespace NutriFlow.Objects
 {
-    public class UserObject
+    public class ObjectUser
     {
         public int Id {  get; set; }
         public string Nome { get; set; }
@@ -9,7 +9,7 @@
         public string Email { get; set; }
         public string Senha { get; set; }
 
-        public UserObject(int id, string name, string sobrenome, string genero, string email, string senha)
+        public ObjectUser(int id, string name, string sobrenome, string genero, string email, string senha)
         {
             this.Id = id;
             this.Nome = name;

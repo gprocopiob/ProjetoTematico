@@ -3,12 +3,12 @@ using System.Data.SqlClient;
 
 namespace ProjetoTematico.MSSQL
 {
-    internal class LoginConnection
+    internal class ConnectionLogin
     {
         public Connection Connection { get; private set; }
         public string ConnectionString { get; private set; }
 
-        public LoginConnection()
+        public ConnectionLogin()
         {
             Connection = new Connection();
 

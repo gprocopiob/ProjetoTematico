@@ -3,7 +3,7 @@ using System.Net.Mail;
 
 namespace NutriFlow.Validation
 {
-    internal class LoginValidation
+    internal class ValidationLogin
     {
         public bool IsLoginFilled(string email, string password)
         {

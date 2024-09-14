@@ -22,13 +22,13 @@ namespace NutriFlow.Connection
                 switch (user)
                 {
                     case UsuarioSupNot28:
-                        _connectionString = Properties.Resources.ConnectionGabriela;
+                        _connectionString = Properties.Settings.Default.connectionGabriela;
                         break;
                     case UsuarioLuca:
-                        _connectionString = Properties.Resources.ConnectionLuca;
+                        _connectionString = Properties.Settings.Default.ConnectionLucca;
                         break;
                     case UsuarioMatheus:
-                        _connectionString = Properties.Resources.ConnectionMatheus;
+                        _connectionString = Properties.Settings.Default.ConnectionMatheus;
                         break;
                     default:
                         _connectionString = "";

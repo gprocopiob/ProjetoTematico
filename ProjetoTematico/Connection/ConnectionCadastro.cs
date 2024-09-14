@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace NutriFlow.Connection
 {
-    internal class CadastroConnection
+    internal class ConnectionCadastro
     {
         public Connection Connection { get; private set; }
         public string ConnectionString { get; private set; }
 
-        public CadastroConnection()
+        public ConnectionCadastro()
         {
             Connection = new Connection();
 
             ConnectionString = Connection.ConnectionString;
         }
 
-        public bool Insert(UserObject user)
+        public bool Insert(ObjectUser user)
         {
             {
                 bool success = false;

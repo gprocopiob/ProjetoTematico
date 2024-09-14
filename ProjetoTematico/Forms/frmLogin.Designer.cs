@@ -1,6 +1,6 @@
 ﻿namespace ProjetoTematico
 {
-    partial class LoginForm
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btnLogin = new System.Windows.Forms.Button();
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.txbSenha = new System.Windows.Forms.TextBox();
@@ -42,7 +42,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.ForeColor = System.Drawing.SystemColors.Control;
@@ -62,7 +62,7 @@
             this.txbEmail.Location = new System.Drawing.Point(127, 46);
             this.txbEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(299, 27);
+            this.txbEmail.Size = new System.Drawing.Size(299, 23);
             this.txbEmail.TabIndex = 1;
             // 
             // txbSenha
@@ -72,7 +72,7 @@
             this.txbSenha.Location = new System.Drawing.Point(127, 97);
             this.txbSenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbSenha.Name = "txbSenha";
-            this.txbSenha.Size = new System.Drawing.Size(299, 27);
+            this.txbSenha.Size = new System.Drawing.Size(299, 23);
             this.txbSenha.TabIndex = 2;
             this.txbSenha.UseSystemPasswordChar = true;
             this.txbSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbSenha_KeyDown);
@@ -84,7 +84,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(124, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 20);
+            this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Email:";
             // 
@@ -95,7 +95,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(124, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 20);
+            this.label2.Size = new System.Drawing.Size(42, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Senha:";
             // 
@@ -106,7 +106,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(173, 185);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 20);
+            this.label3.Size = new System.Drawing.Size(101, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Não possui login?";
             // 
@@ -118,7 +118,7 @@
             this.btnCadastro.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnCadastro.Location = new System.Drawing.Point(272, 185);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(87, 20);
+            this.btnCadastro.Size = new System.Drawing.Size(69, 15);
             this.btnCadastro.TabIndex = 6;
             this.btnCadastro.Text = "Cadastre-se";
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
@@ -134,9 +134,9 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // LoginForm
+            // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(452, 220);
@@ -151,7 +151,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "LoginForm";
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NutriFlow";
             this.Load += new System.EventHandler(this.LoginForm_Load);

@@ -22,5 +22,32 @@ namespace NutriFlow.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=localhost\\SQLEXPRESS;Database=NUTRIFLOW;Trusted_Connection=True;")]
+        public string connectionGabriela {
+            get {
+                return ((string)(this["connectionGabriela"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public string ConnectionLucca {
+            get {
+                return ((string)(this["ConnectionLucca"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public string ConnectionMatheus {
+            get {
+                return ((string)(this["ConnectionMatheus"]));
+            }
+        }
     }
 }

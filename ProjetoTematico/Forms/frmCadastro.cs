@@ -1,30 +1,31 @@
-﻿using NutriFlow.Connection;
-using System;
+﻿using System;
 using System.Drawing;
-using System.Windows.Forms;
-using ProjetoTematico;
-using NutriFlow.Objects;
-using System.Linq.Expressions;
-using NutriFlow.Validation;
-using System.Runtime.InteropServices;
-using System.Diagnostics.Eventing.Reader;
 using NutriFlow.Forms;
+using NutriFlow.Objects;
+using System.Windows.Forms;
+using NutriFlow.Connection;
+using NutriFlow.Validation;
 
 namespace ProjetoTematico.Forms
 {
-    public partial class CadastroForm : Form
+    public partial class frmCadastro : Form
     {
-        private CadastroConnection Connection = new CadastroConnection();
-        private CadastroValidation Validation = new CadastroValidation();
+        private ConnectionCadastro Connection = new ConnectionCadastro();
+        private ValidationCadastro Validation = new ValidationCadastro();
+        public Button BtnVoltar;
+        public Button BtnVoltarr
+        {
+            get { return btnVoltar; }
+        }
 
-        public CadastroForm()
+        public frmCadastro()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ControlUtils.ShowAndCloseForm(this, typeof(LoginForm));
+            ControlUtils.ShowAndCloseForm(this, typeof(frmLogin));
         }
 
         private void frmCadastro_FormClosing(object sender, FormClosingEventArgs e)
@@ -63,7 +64,7 @@ namespace ProjetoTematico.Forms
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            UserObject user = GetUser();
+            ObjectUser user = GetUser();
 
             if (Validation.IsUserNull(user))
             {
@@ -87,7 +88,7 @@ namespace ProjetoTematico.Forms
                     {
                         MessageBox.Show($"Cadastro realizado com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        ControlUtils.ShowAndCloseForm(this, typeof(MenuForm));
+                        ControlUtils.ShowAndCloseForm(this, typeof(frmMenu));
                     }
                 }
 
@@ -107,7 +108,7 @@ namespace ProjetoTematico.Forms
             }
         }
 
-        private UserObject GetUser()
+        private ObjectUser GetUser()
         {
             try
             {
@@ -118,11 +119,11 @@ namespace ProjetoTematico.Forms
                 string email = txbEmail.Text;
                 string senha = txbSenha.Text;
 
-                UserObject user = null;
+                ObjectUser user = null;
 
                 if (id != 0)
                 {
-                    user = new UserObject(id, nome, sobrenome, genero, email, senha);
+                    user = new ObjectUser(id, nome, sobrenome, genero, email, senha);
                 }
                 return user;
             }
@@ -145,6 +146,11 @@ namespace ProjetoTematico.Forms
             }
 
             MessageBox.Show($"{message}", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void frmCadastro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

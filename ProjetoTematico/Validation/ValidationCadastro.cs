@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace NutriFlow.Validation
 {
-    internal class CadastroValidation
+    internal class ValidationCadastro
     {
-        public bool IsUserNull(UserObject user)
+        public bool IsUserNull(ObjectUser user)
         {
             return user == null;
         }
 
-        public bool IsUserFilled(UserObject user)
+        public bool IsUserFilled(ObjectUser user)
         {
             bool isUserFilled = false;
 
