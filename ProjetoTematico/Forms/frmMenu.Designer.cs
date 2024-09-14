@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.pnlBotoes = new System.Windows.Forms.Panel();
             this.btnExercicios = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.pbxMenu = new System.Windows.Forms.PictureBox();
             this.pnlForms = new System.Windows.Forms.Panel();
+            this.ttpHint = new System.Windows.Forms.ToolTip(this.components);
             this.pnlBotoes.SuspendLayout();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMenu)).BeginInit();
@@ -93,6 +95,8 @@
             this.pbxMenu.TabIndex = 0;
             this.pbxMenu.TabStop = false;
             this.pbxMenu.Click += new System.EventHandler(this.pbxMenu_Click);
+            this.pbxMenu.MouseEnter += new System.EventHandler(this.pbxMenu_MouseEnter);
+            this.pbxMenu.MouseLeave += new System.EventHandler(this.pbxMenu_MouseLeave);
             // 
             // pnlForms
             // 
@@ -131,5 +135,6 @@
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Panel pnlForms;
         private System.Windows.Forms.Button btnExercicios;
+        private System.Windows.Forms.ToolTip ttpHint;
     }
 }

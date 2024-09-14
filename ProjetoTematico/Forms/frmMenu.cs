@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Windows.Forms;
 using ProjetoTematico;
 using ProjetoTematico.Forms;
@@ -11,6 +12,7 @@ namespace NutriFlow.Forms
     public partial class frmMenu : Form
     {
         private Form frmAtivo;
+        public bool isTabSelected = false;
 
         public frmMenu()
         {
@@ -19,11 +21,6 @@ namespace NutriFlow.Forms
 
         private void FormShow(Type formType)
         {
-            if (!typeof(Form).IsAssignableFrom(formType))
-            {
-                throw new ArgumentException("Tipo fornecido não é um Form", nameof(formType));
-            }
-
             Form frm = (Form)Activator.CreateInstance(formType);
 
             //ActiveFormClose();
@@ -50,12 +47,22 @@ namespace NutriFlow.Forms
 
         private void btnExercicios_Click(object sender, EventArgs e)
         {
+            isTabSelected = true;
+
             FormShow(typeof(frmExercicio));
         }
 
         private void pbxMenu_Click(object sender, EventArgs e)
         {
-            ShowPanelBotoes(false);
+            if (isTabSelected)
+            {
+                isTabSelected = true;
+                ShowPanelBotoes(false);
+            }
+            else
+            {
+                MessageBox.Show("Nenhuma funcionalidade foi selecionada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void ShowPanelBotoes(bool isPanelVisible)
@@ -80,7 +87,7 @@ namespace NutriFlow.Forms
 
             if (btnMenu != null)
             {
-                btnMenu.Visible = false; // Torna o botão invisível
+                btnMenu.Visible = false;
             }
         }
 
@@ -102,7 +109,7 @@ namespace NutriFlow.Forms
 
             this.Controls.Add(newButton);
 
-            newButton.BringToFront();            
+            newButton.BringToFront();
         }
 
         private void ResizeForm(bool isDefaultSize)
@@ -120,6 +127,27 @@ namespace NutriFlow.Forms
         private void btnMenu_Click(object sender, EventArgs e)
         {
             ShowPanelBotoes(true);
+        }
+
+        private void pbxMenu_MouseEnter(object sender, EventArgs e)
+        {
+            ShowToolTip(pbxMenu, "Ocultar menu");
+        }
+        public void ShowToolTip(Control ctrl, string title)
+        {
+            ttpHint.IsBalloon = false;
+            ttpHint.ToolTipIcon = ToolTipIcon.Info;
+            ttpHint.Show(title, ctrl);
+        }
+
+        private void pbxMenu_MouseLeave(object sender, EventArgs e)
+        {
+            HideToolTip(pbxMenu);
+        }
+
+        private void HideToolTip(Control ctrl)
+        {
+            ttpHint.Hide(ctrl);
         }
     }
 }
