@@ -18,7 +18,6 @@ namespace NutriFlow.Forms
         {
             InitializeComponent();
         }
-
         private void FormShow(Type formType)
         {
             Form frm = (Form)Activator.CreateInstance(formType);
@@ -35,14 +34,13 @@ namespace NutriFlow.Forms
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            LoadImage("logo_planejamento.png", btnExercicios);
         }
 
-        private void LoadImage(string image, Button btn)
+        private void LoadImage(string image, Button btn, int width, int height)
         {
             string iconPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\Utils", image);
             Image yourImage = Image.FromFile(iconPath);
-            btn.Image = new Bitmap(yourImage, new Size(30, 30));
+            btn.Image = new Bitmap(yourImage, new Size(width, height));
         }
 
         private void btnExercicios_Click(object sender, EventArgs e)
@@ -52,20 +50,7 @@ namespace NutriFlow.Forms
             FormShow(typeof(frmExercicio));
         }
 
-        private void pbxMenu_Click(object sender, EventArgs e)
-        {
-            if (isTabSelected)
-            {
-                isTabSelected = true;
-                ShowPanelBotoes(false);
-            }
-            else
-            {
-                MessageBox.Show("Nenhuma funcionalidade foi selecionada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void ShowPanelBotoes(bool isPanelVisible)
+        private void SetPanelBotoes(bool isPanelVisible)
         {
             pnlBotoes.Visible = isPanelVisible;
 
@@ -97,15 +82,16 @@ namespace NutriFlow.Forms
 
             newButton.Name = "btnMenu";
             newButton.Text = "Clique Aqui";
-            newButton.Size = new Size(31, 24);
-            newButton.Location = new Point(12, 12);
-            newButton.Click += new EventHandler(btnMenu_Click);
+            newButton.Size = new Size(26, 16);
+            newButton.Location = new Point(12, 24);
             newButton.BackColor = SystemColors.Control;
             newButton.Cursor = Cursors.Hand;
 
             Image yourImage = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\Utils", "logo_menu.png"));
             newButton.Image = new Bitmap(yourImage, new Size(30, 30));
             newButton.SizeMode = PictureBoxSizeMode.Zoom;
+
+            newButton.Click += new EventHandler(btnMenu_Click);
 
             this.Controls.Add(newButton);
 
@@ -126,7 +112,7 @@ namespace NutriFlow.Forms
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            ShowPanelBotoes(true);
+            SetPanelBotoes(true);
         }
 
         private void pbxMenu_MouseEnter(object sender, EventArgs e)
@@ -148,6 +134,113 @@ namespace NutriFlow.Forms
         private void HideToolTip(Control ctrl)
         {
             ttpHint.Hide(ctrl);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            isTabSelected = true;
+
+            FormShow(typeof(frmObjetivo));
+        }
+
+        private void btnExercicio_MouseEnter(object sender, EventArgs e)
+        {
+            ChangeForeColor(true, pnlExercicio, lblExercicio, pbxExercicio);
+        }
+
+        private void btnExercicio_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeForeColor(false, pnlExercicio, lblExercicio, pbxExercicio);
+        }
+        public void ChangeForeColor(bool isMouseIn, params Control[] controls)
+        {
+            Color color = isMouseIn ? Color.FromArgb(70, 130, 180) : Color.FromArgb(0, 0, 100);
+
+            foreach (var control in controls)
+            {
+                if (control is PictureBox)
+                {
+                    ((PictureBox)control).BackColor = color;
+                }
+                else if (control is Label)
+                {
+                    ((Label)control).BackColor = color;
+                }
+                else if (control is Panel)
+                {
+                    ((Panel)control).BackColor = color;
+                }
+            }
+        }
+
+        private void pnlRegistro_MouseEnter(object sender, EventArgs e)
+        {
+            ChangeForeColor(true, pnlRegistro, lblRegistro, pbxRegistro);
+        }
+
+        private void pnlRegistro_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeForeColor(false, pnlRegistro, lblRegistro, pbxRegistro);
+        }
+
+        private void pnlRegistro_Click(object sender, EventArgs e)
+        {
+            isTabSelected = true;
+
+            FormShow(typeof(frmRegistro));
+        }
+
+        private void pnlObjetivo_MouseEnter(object sender, EventArgs e)
+        {
+            ChangeForeColor(true, pnlObjetivo, lblObjetivo, pbxObjetivo);
+        }
+        private void pnlObjetivo_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeForeColor(false, pnlObjetivo, lblObjetivo, pbxObjetivo);
+        }
+
+        private void pnlConfiguracao_MouseEnter(object sender, EventArgs e)
+        {
+            ChangeForeColor(true, pnlConfiguracao, lblConfiguracao, pbxConfiguracao);
+        }
+
+        private void pnlConfiguracao_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeForeColor(false, pnlConfiguracao, lblConfiguracao, pbxConfiguracao);
+        }
+
+        private void pnlObjetivo_Click(object sender, EventArgs e)
+        {
+            isTabSelected = true;
+
+            FormShow(typeof(frmObjetivo));
+        }
+
+        private void pbxMenu_Click(object sender, EventArgs e)
+        {
+            if (isTabSelected)
+            {
+                isTabSelected = true;
+                SetPanelBotoes(false);
+            }
+            else
+            {
+                MessageBox.Show("Nenhuma aba foi selecionada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void pnlConfiguracao_Click(object sender, EventArgs e)
+        {
+            isTabSelected = true;
+
+            FormShow(typeof(frmConfiguracao));
+        }
+
+        private void pnlExercicio_Click(object sender, EventArgs e)
+        {
+            isTabSelected = true;
+
+            FormShow(typeof(frmExercicio));
         }
     }
 }

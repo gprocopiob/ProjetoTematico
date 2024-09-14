@@ -70,6 +70,12 @@
     <Compile Include="Connection\ConnectionCadastro.cs" />
     <Compile Include="Connection\Connection.cs" />
     <Compile Include="ControlUtils.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,11 +101,26 @@
     <Compile Include="Forms\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmObjetivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmObjetivo.Designer.cs">
+      <DependentUpon>frmObjetivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRegistro.Designer.cs">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Objects\ObjectUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validation\ValidationCadastro.cs" />
     <Compile Include="Validation\ValidationLogin.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCadastro.resx">
       <DependentUpon>frmCadastro.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +132,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmObjetivo.resx">
+      <DependentUpon>frmObjetivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRegistro.resx">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,8 +164,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo_UCS_Vertical_PNG.ico" />
-    <Content Include="Utils\logo_planejamento.png" />
+    <Content Include="Utils\logo_configuracao.png" />
+    <Content Include="Utils\logo_exercicio.png" />
     <Content Include="Utils\logo_menu.png" />
+    <Content Include="Utils\logo_objetivo.png" />
     <Content Include="Utils\logo_registro.png" />
     <Content Include="Utils\logo_UCS.ico" />
     <Content Include="Utils\ScriptSQL.txt" />
