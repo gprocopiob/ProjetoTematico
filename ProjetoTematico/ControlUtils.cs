@@ -57,5 +57,20 @@ namespace ProjetoTematico
             pbx.Visible = visible;
             pnl.Visible = !visible;
         }
+
+        public static void AllowNumbersAndComa(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+
+            if (Char.IsDigit(e.KeyChar) || e.KeyChar == ',')
+            {
+                return;
+            }
+
+            e.Handled = true;
+        }
     }
 }

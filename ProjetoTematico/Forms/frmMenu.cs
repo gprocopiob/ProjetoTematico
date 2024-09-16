@@ -2,38 +2,38 @@
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Windows.Forms;
-using ProjetoTematico;
-using ProjetoTematico.Forms;
 
 namespace NutriFlow.Forms
 {
     public partial class frmMenu : Form
     {
-        private Form frmAtivo;
+        public static Form frmAtivo;
+        private static Panel PnlForms;
         public bool isTabSelected = false;
 
         public frmMenu()
         {
             InitializeComponent();
+            PnlForms = this.pnlForms;
         }
-        private void FormShow(Type formType)
+
+        public static void FormShow(Type formType)
         {
+            if (frmAtivo != null)
+            {
+                frmAtivo.Close();
+            }
+
             Form frm = (Form)Activator.CreateInstance(formType);
 
-            //ActiveFormClose();
             frmAtivo = frm;
             frm.TopLevel = false;
             frm.AutoScaleMode = AutoScaleMode.Dpi;
             frm.FormBorderStyle = FormBorderStyle.None;
-            pnlForms.Controls.Add(frm);
+            PnlForms.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
-        }
-
-        private void frmMenu_Load(object sender, EventArgs e)
-        {
         }
 
         private void LoadImage(string image, Button btn, int width, int height)
@@ -211,9 +211,19 @@ namespace NutriFlow.Forms
 
         private void pnlObjetivo_Click(object sender, EventArgs e)
         {
-            isTabSelected = true;
+            isTabSelected = true;                       
 
             FormShow(typeof(frmObjetivo));
+        }
+
+        private void ShowInformacao()
+        {
+            if (frmAtivo != null)
+            {
+                frmAtivo.Close();
+            }
+
+            FormShow(typeof(frmInformacao));
         }
 
         private void pbxMenu_Click(object sender, EventArgs e)
@@ -241,6 +251,11 @@ namespace NutriFlow.Forms
             isTabSelected = true;
 
             FormShow(typeof(frmExercicio));
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            FormShow(typeof(frmInformacao));
         }
     }
 }

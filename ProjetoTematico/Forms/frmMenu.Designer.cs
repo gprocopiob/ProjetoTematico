@@ -132,9 +132,9 @@
             this.lblObjetivo.ForeColor = System.Drawing.Color.White;
             this.lblObjetivo.Location = new System.Drawing.Point(43, 20);
             this.lblObjetivo.Name = "lblObjetivo";
-            this.lblObjetivo.Size = new System.Drawing.Size(63, 15);
+            this.lblObjetivo.Size = new System.Drawing.Size(45, 15);
             this.lblObjetivo.TabIndex = 2;
-            this.lblObjetivo.Text = "OBJETIVO";
+            this.lblObjetivo.Text = "METAS";
             // 
             // pbxObjetivo
             // 
