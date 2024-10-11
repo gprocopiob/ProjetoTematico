@@ -122,6 +122,7 @@
             this.pnlObjetivo.Size = new System.Drawing.Size(181, 52);
             this.pnlObjetivo.TabIndex = 8;
             this.pnlObjetivo.Click += new System.EventHandler(this.pnlObjetivo_Click);
+            this.pnlObjetivo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlObjetivo_Paint);
             this.pnlObjetivo.MouseEnter += new System.EventHandler(this.pnlObjetivo_MouseEnter);
             this.pnlObjetivo.MouseLeave += new System.EventHandler(this.pnlObjetivo_MouseLeave);
             // 
@@ -132,9 +133,9 @@
             this.lblObjetivo.ForeColor = System.Drawing.Color.White;
             this.lblObjetivo.Location = new System.Drawing.Point(43, 20);
             this.lblObjetivo.Name = "lblObjetivo";
-            this.lblObjetivo.Size = new System.Drawing.Size(63, 15);
+            this.lblObjetivo.Size = new System.Drawing.Size(45, 15);
             this.lblObjetivo.TabIndex = 2;
-            this.lblObjetivo.Text = "OBJETIVO";
+            this.lblObjetivo.Text = "METAS";
             // 
             // pbxObjetivo
             // 
@@ -264,6 +265,7 @@
             this.pnlForms.Name = "pnlForms";
             this.pnlForms.Size = new System.Drawing.Size(704, 495);
             this.pnlForms.TabIndex = 6;
+            this.pnlForms.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlForms_Paint);
             // 
             // frmMenu
             // 

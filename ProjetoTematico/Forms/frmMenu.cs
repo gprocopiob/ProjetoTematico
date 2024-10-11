@@ -2,38 +2,40 @@
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Windows.Forms;
-using ProjetoTematico;
-using ProjetoTematico.Forms;
 
 namespace NutriFlow.Forms
 {
     public partial class frmMenu : Form
     {
-        private Form frmAtivo;
+        public static Form frmAtivo;
+        private static Panel PnlForms;
         public bool isTabSelected = false;
+        public string email;
 
-        public frmMenu()
+        public frmMenu(string email)
         {
             InitializeComponent();
+            PnlForms = this.pnlForms;
+            this.email = email;
         }
-        private void FormShow(Type formType)
-        {
-            Form frm = (Form)Activator.CreateInstance(formType);
 
-            //ActiveFormClose();
+        public static void FormShow(Type formType, string email)
+        {
+            if (frmAtivo != null)
+            {
+                frmAtivo.Close();
+            }
+
+            Form frm = (Form)Activator.CreateInstance(formType, email);
+
             frmAtivo = frm;
             frm.TopLevel = false;
             frm.AutoScaleMode = AutoScaleMode.Dpi;
             frm.FormBorderStyle = FormBorderStyle.None;
-            pnlForms.Controls.Add(frm);
+            PnlForms.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
-        }
-
-        private void frmMenu_Load(object sender, EventArgs e)
-        {
         }
 
         private void LoadImage(string image, Button btn, int width, int height)
@@ -47,7 +49,7 @@ namespace NutriFlow.Forms
         {
             isTabSelected = true;
 
-            FormShow(typeof(frmExercicio));
+            FormShow(typeof(frmExercicio), email);
         }
 
         private void SetPanelBotoes(bool isPanelVisible)
@@ -140,7 +142,7 @@ namespace NutriFlow.Forms
         {
             isTabSelected = true;
 
-            FormShow(typeof(frmObjetivo));
+            FormShow(typeof(frmObjetivo), email);
         }
 
         private void btnExercicio_MouseEnter(object sender, EventArgs e)
@@ -187,7 +189,7 @@ namespace NutriFlow.Forms
         {
             isTabSelected = true;
 
-            FormShow(typeof(frmRegistro));
+            FormShow(typeof(frmRegistro), email);
         }
 
         private void pnlObjetivo_MouseEnter(object sender, EventArgs e)
@@ -211,9 +213,19 @@ namespace NutriFlow.Forms
 
         private void pnlObjetivo_Click(object sender, EventArgs e)
         {
-            isTabSelected = true;
+            isTabSelected = true;                       
 
-            FormShow(typeof(frmObjetivo));
+            FormShow(typeof(frmObjetivo), email);
+        }
+
+        private void ShowInformacao()
+        {
+            if (frmAtivo != null)
+            {
+                frmAtivo.Close();
+            }
+
+            FormShow(typeof(frmInformacao), email);
         }
 
         private void pbxMenu_Click(object sender, EventArgs e)
@@ -233,14 +245,29 @@ namespace NutriFlow.Forms
         {
             isTabSelected = true;
 
-            FormShow(typeof(frmConfiguracao));
+            FormShow(typeof(frmConfiguracao), email);
         }
 
         private void pnlExercicio_Click(object sender, EventArgs e)
         {
             isTabSelected = true;
 
-            FormShow(typeof(frmExercicio));
+            FormShow(typeof(frmExercicio), email);
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            FormShow(typeof(frmInformacao), email);
+        }
+
+        private void pnlForms_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlObjetivo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

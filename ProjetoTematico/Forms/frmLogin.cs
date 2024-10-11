@@ -11,22 +11,17 @@ namespace ProjetoTematico
     {
         private ConnectionLogin Connection = new ConnectionLogin();
         private ValidationLogin Validation = new ValidationLogin();
+        private string email;
 
-        public frmLogin()
+        public frmLogin(string email)
         {
             InitializeComponent();
-
-            //        new ToastContentBuilder()
-            //.AddArgument("action", "viewConversation")
-            //.AddArgument("conversationId", 9813)
-            //.AddText("Andrew sent you a picture")
-            //.AddText("Check this out, The Enchantments in Washington!")
-            //.Show();
+            this.email = email;
         }
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            ControlUtils.ShowAndCloseForm(this, typeof(frmCadastro));
+            ControlUtils.ShowAndCloseForm(this, typeof(frmCadastro), "");
         }
 
         private void txbSenha_KeyDown(object sender, KeyEventArgs e)
@@ -62,7 +57,8 @@ namespace ProjetoTematico
 
                         if (loginSuccessful)
                         {
-                            ControlUtils.ShowAndCloseForm(this, typeof(frmMenu));
+                            this.email = email;
+                            ControlUtils.ShowAndCloseForm(this, typeof(frmMenu), email);
                         }
                         else
                         {
@@ -86,7 +82,7 @@ namespace ProjetoTematico
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            ControlUtils.ShowAndCloseForm(this, typeof(frmMenu));
+            //ControlUtils.ShowAndCloseForm(this, typeof(frmMenu));
         }
     }
 }

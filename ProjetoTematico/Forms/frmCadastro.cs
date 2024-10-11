@@ -12,15 +12,16 @@ namespace ProjetoTematico.Forms
     {
         private ConnectionCadastro Connection = new ConnectionCadastro();
         private ValidationCadastro Validation = new ValidationCadastro();
-
+        private string email;
         public frmCadastro()
         {
             InitializeComponent();
+            this.email = email;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ControlUtils.ShowAndCloseForm(this, typeof(frmLogin));
+            ControlUtils.ShowAndCloseForm(this, typeof(frmLogin), email);
         }
 
         private void frmCadastro_FormClosing(object sender, FormClosingEventArgs e)
@@ -83,7 +84,7 @@ namespace ProjetoTematico.Forms
                     {
                         MessageBox.Show($"Cadastro realizado com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        ControlUtils.ShowAndCloseForm(this, typeof(frmMenu));
+                        ControlUtils.ShowAndCloseForm(this, typeof(frmMenu), email);
                     }
                 }
 
@@ -107,7 +108,7 @@ namespace ProjetoTematico.Forms
         {
             try
             {
-                int id = Connection.GetLastID();
+
                 string nome = txbNome.Text;
                 string sobrenome = txbSobrenome.Text;
                 string genero = cmbGenero.Text;
@@ -116,10 +117,12 @@ namespace ProjetoTematico.Forms
 
                 ObjectUser user = null;
 
-                if (id != 0)
-                {
-                    user = new ObjectUser(id, nome, sobrenome, genero, email, senha);
-                }
+                // TODO: CRIAR FUNCAO GETEMAIL, QUE PESQUISA PELO EMAIL INFORMADO (TOUPPER)
+
+                //{
+                //    user = new ObjectUser(nome, sobrenome, genero, email, senha);
+                //}
+
                 return user;
             }
             catch (Exception ex)
@@ -129,6 +132,7 @@ namespace ProjetoTematico.Forms
                 return null;
             }
         }
+
         public void SetLoginInvalido(string message, bool cleanProps = true)
         {
             if (cleanProps)

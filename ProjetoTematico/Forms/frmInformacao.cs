@@ -8,13 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NutriFlow
+namespace NutriFlow.Forms
 {
-    public partial class frmConfiguracao : Form
+    public partial class frmInformacao : Form
     {
-        public frmConfiguracao()
+        private string email;
+
+        public frmInformacao(string email)
         {
             InitializeComponent();
+            this.email = email;
+        }
+
+        private void frmInformacao_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

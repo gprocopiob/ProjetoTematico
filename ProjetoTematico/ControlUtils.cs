@@ -41,13 +41,13 @@ namespace ProjetoTematico
             }
         }
 
-        public static void ShowAndCloseForm(Form currentForm, Type newFormType)
+        public static void ShowAndCloseForm(Form currentForm, Type newFormType, string email)
         {
-            Form newForm = (Form)Activator.CreateInstance(newFormType);
+            var form = (Form)Activator.CreateInstance(newFormType, email);
 
             currentForm.Hide();
 
-            newForm.ShowDialog();
+            form.ShowDialog();
 
             currentForm.Close();
         }
@@ -56,6 +56,21 @@ namespace ProjetoTematico
         {
             pbx.Visible = visible;
             pnl.Visible = !visible;
+        }
+
+        public static void AllowNumbersAndComa(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+
+            if (Char.IsDigit(e.KeyChar) || e.KeyChar == ',')
+            {
+                return;
+            }
+
+            e.Handled = true;
         }
     }
 }
