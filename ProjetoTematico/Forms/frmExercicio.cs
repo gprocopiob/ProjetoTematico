@@ -6,9 +6,17 @@ namespace NutriFlow.Forms
 {
     public partial class frmExercicio : Form
     {
-        public frmExercicio()
+        private string email;
+
+        public frmExercicio(string email)
         {
             InitializeComponent();
+            this.email = email;
+        }
+
+        private void frmExercicio_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

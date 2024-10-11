@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="Connection\ConnectionCadastro.cs" />
     <Compile Include="Connection\Connection.cs" />
+    <Compile Include="Connection\ConnectionObjetivo.cs" />
     <Compile Include="ControlUtils.cs" />
     <Compile Include="Forms\frmInformacao.cs">
       <SubType>Form</SubType>
@@ -119,6 +120,8 @@
     <Compile Include="Forms\frmRegistro.Designer.cs">
       <DependentUpon>frmRegistro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validation\ValidationObjetivo.cs" />
+    <Compile Include="Objects\ObjectObjetivos.cs" />
     <Compile Include="Objects\ObjectUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

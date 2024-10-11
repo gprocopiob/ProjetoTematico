@@ -54,6 +54,10 @@
             this.ckbHidratacao = new System.Windows.Forms.CheckBox();
             this.ckbHabitos = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesoAtual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesoDesejado)).BeginInit();
@@ -158,12 +162,13 @@
             this.btnSalvar.FlatAppearance.BorderColor = System.Drawing.Color.YellowGreen;
             this.btnSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Location = new System.Drawing.Point(252, 451);
+            this.btnSalvar.Location = new System.Drawing.Point(261, 445);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 14;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -172,7 +177,7 @@
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightPink;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(333, 451);
+            this.btnCancelar.Location = new System.Drawing.Point(342, 445);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 15;
@@ -186,11 +191,6 @@
             this.nudPesoAtual.Name = "nudPesoAtual";
             this.nudPesoAtual.Size = new System.Drawing.Size(152, 20);
             this.nudPesoAtual.TabIndex = 19;
-            this.nudPesoAtual.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
             // 
             // label8
             // 
@@ -225,11 +225,6 @@
             this.nudPesoDesejado.Name = "nudPesoDesejado";
             this.nudPesoDesejado.Size = new System.Drawing.Size(152, 20);
             this.nudPesoDesejado.TabIndex = 22;
-            this.nudPesoDesejado.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
             // 
             // label11
             // 
@@ -246,11 +241,6 @@
             this.nudExercicio.Name = "nudExercicio";
             this.nudExercicio.Size = new System.Drawing.Size(152, 20);
             this.nudExercicio.TabIndex = 24;
-            this.nudExercicio.Value = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
             // 
             // ckbPerda
             // 
@@ -324,6 +314,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.ckbHabitos);
             this.groupBox1.Controls.Add(this.ckbHidratacao);
             this.groupBox1.Controls.Add(this.ckbSono);
@@ -336,11 +327,64 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Objetivos";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.Control;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(54, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(13, 17);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "*";
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.SkyBlue;
+            this.btnAlterar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.ForeColor = System.Drawing.Color.Black;
+            this.btnAlterar.Location = new System.Drawing.Point(12, 445);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.TabIndex = 32;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.Control;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(347, 243);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(13, 17);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "*";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.Control;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(328, 201);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(13, 17);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "*";
+            // 
             // frmObjetivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(704, 495);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.nudExercicio);
             this.Controls.Add(this.label10);
@@ -361,9 +405,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmObjetivo";
             this.Text = ",";
+            this.Load += new System.EventHandler(this.frmObjetivo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesoAtual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPesoDesejado)).EndInit();
@@ -402,5 +449,9 @@
         private System.Windows.Forms.CheckBox ckbHidratacao;
         private System.Windows.Forms.CheckBox ckbHabitos;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
     }
 }

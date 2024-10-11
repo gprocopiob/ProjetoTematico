@@ -63,6 +63,7 @@
             this.Name = "frmInformacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInformacao";
+            this.Load += new System.EventHandler(this.frmInformacao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
