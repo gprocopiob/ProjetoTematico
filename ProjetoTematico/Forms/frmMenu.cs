@@ -89,7 +89,7 @@ namespace NutriFlow.Forms
             newButton.BackColor = SystemColors.Control;
             newButton.Cursor = Cursors.Hand;
 
-            Image yourImage = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\Utils", "logo_menu.png"));
+            Image yourImage = Image.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images\\logo_menu.png"));
             newButton.Image = new Bitmap(yourImage, new Size(30, 30));
             newButton.SizeMode = PictureBoxSizeMode.Zoom;
 
@@ -213,7 +213,7 @@ namespace NutriFlow.Forms
 
         private void pnlObjetivo_Click(object sender, EventArgs e)
         {
-            isTabSelected = true;                       
+            isTabSelected = true;
 
             FormShow(typeof(frmObjetivo), email);
         }
@@ -266,6 +266,11 @@ namespace NutriFlow.Forms
         }
 
         private void pnlObjetivo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlConfiguracao_Paint(object sender, PaintEventArgs e)
         {
 
         }
