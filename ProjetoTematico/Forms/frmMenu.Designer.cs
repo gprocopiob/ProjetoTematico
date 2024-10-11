@@ -86,6 +86,7 @@
             this.pnlConfiguracao.Size = new System.Drawing.Size(181, 52);
             this.pnlConfiguracao.TabIndex = 9;
             this.pnlConfiguracao.Click += new System.EventHandler(this.pnlConfiguracao_Click);
+            this.pnlConfiguracao.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlConfiguracao_Paint);
             this.pnlConfiguracao.MouseEnter += new System.EventHandler(this.pnlConfiguracao_MouseEnter);
             this.pnlConfiguracao.MouseLeave += new System.EventHandler(this.pnlConfiguracao_MouseLeave);
             // 

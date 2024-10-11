@@ -176,14 +176,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo_UCS_Vertical_PNG.ico" />
-    <Content Include="Images\logo_configuracao.png" />
-    <Content Include="Images\logo_exercicio.png" />
-    <Content Include="Images\logo_menu.png" />
-    <Content Include="Images\logo_objetivo.png" />
-    <Content Include="Images\logo_registro.png" />
-    <Content Include="Images\logo_UCS.ico" />
+    <Content Include="Images\logo_configuracao.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logo_exercicio.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logo_menu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logo_objetivo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logo_registro.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logo_UCS.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Utils\ScriptSQL.txt" />
-    <Content Include="Images\user.png" />
+    <Content Include="Images\user.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
