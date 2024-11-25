@@ -33,37 +33,37 @@
             this.pnlBotoes = new System.Windows.Forms.Panel();
             this.pnlConfiguracao = new System.Windows.Forms.Panel();
             this.lblConfiguracao = new System.Windows.Forms.Label();
-            this.pbxConfiguracao = new System.Windows.Forms.PictureBox();
             this.pnlObjetivo = new System.Windows.Forms.Panel();
             this.lblObjetivo = new System.Windows.Forms.Label();
-            this.pbxObjetivo = new System.Windows.Forms.PictureBox();
             this.pnlRegistro = new System.Windows.Forms.Panel();
             this.lblRegistro = new System.Windows.Forms.Label();
-            this.pbxRegistro = new System.Windows.Forms.PictureBox();
             this.pnlExercicio = new System.Windows.Forms.Panel();
             this.lblExercicio = new System.Windows.Forms.Label();
-            this.pbxExercicio = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblMenu = new System.Windows.Forms.Label();
-            this.pbxMenu = new System.Windows.Forms.PictureBox();
             this.pnlForms = new System.Windows.Forms.Panel();
             this.ttpHint = new System.Windows.Forms.ToolTip(this.components);
+            this.pbxConfiguracao = new System.Windows.Forms.PictureBox();
+            this.pbxObjetivo = new System.Windows.Forms.PictureBox();
+            this.pbxRegistro = new System.Windows.Forms.PictureBox();
+            this.pbxExercicio = new System.Windows.Forms.PictureBox();
+            this.pbxMenu = new System.Windows.Forms.PictureBox();
             this.pnlBotoes.SuspendLayout();
             this.pnlConfiguracao.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxConfiguracao)).BeginInit();
             this.pnlObjetivo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxObjetivo)).BeginInit();
             this.pnlRegistro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxRegistro)).BeginInit();
             this.pnlExercicio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxExercicio)).BeginInit();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxConfiguracao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxObjetivo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxRegistro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxExercicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBotoes
             // 
-            this.pnlBotoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.pnlBotoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(24)))));
             this.pnlBotoes.Controls.Add(this.pnlConfiguracao);
             this.pnlBotoes.Controls.Add(this.pnlObjetivo);
             this.pnlBotoes.Controls.Add(this.pnlRegistro);
@@ -72,7 +72,7 @@
             this.pnlBotoes.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlBotoes.Location = new System.Drawing.Point(0, 0);
             this.pnlBotoes.Name = "pnlBotoes";
-            this.pnlBotoes.Size = new System.Drawing.Size(181, 495);
+            this.pnlBotoes.Size = new System.Drawing.Size(181, 476);
             this.pnlBotoes.TabIndex = 5;
             // 
             // pnlConfiguracao
@@ -86,7 +86,6 @@
             this.pnlConfiguracao.Size = new System.Drawing.Size(181, 52);
             this.pnlConfiguracao.TabIndex = 9;
             this.pnlConfiguracao.Click += new System.EventHandler(this.pnlConfiguracao_Click);
-            this.pnlConfiguracao.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlConfiguracao_Paint);
             this.pnlConfiguracao.MouseEnter += new System.EventHandler(this.pnlConfiguracao_MouseEnter);
             this.pnlConfiguracao.MouseLeave += new System.EventHandler(this.pnlConfiguracao_MouseLeave);
             // 
@@ -101,17 +100,6 @@
             this.lblConfiguracao.TabIndex = 2;
             this.lblConfiguracao.Text = "CONFIGURAÇÃO";
             // 
-            // pbxConfiguracao
-            // 
-            this.pbxConfiguracao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxConfiguracao.Image = ((System.Drawing.Image)(resources.GetObject("pbxConfiguracao.Image")));
-            this.pbxConfiguracao.Location = new System.Drawing.Point(8, 12);
-            this.pbxConfiguracao.Name = "pbxConfiguracao";
-            this.pbxConfiguracao.Size = new System.Drawing.Size(30, 30);
-            this.pbxConfiguracao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxConfiguracao.TabIndex = 1;
-            this.pbxConfiguracao.TabStop = false;
-            // 
             // pnlObjetivo
             // 
             this.pnlObjetivo.Controls.Add(this.lblObjetivo);
@@ -123,7 +111,6 @@
             this.pnlObjetivo.Size = new System.Drawing.Size(181, 52);
             this.pnlObjetivo.TabIndex = 8;
             this.pnlObjetivo.Click += new System.EventHandler(this.pnlObjetivo_Click);
-            this.pnlObjetivo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlObjetivo_Paint);
             this.pnlObjetivo.MouseEnter += new System.EventHandler(this.pnlObjetivo_MouseEnter);
             this.pnlObjetivo.MouseLeave += new System.EventHandler(this.pnlObjetivo_MouseLeave);
             // 
@@ -137,17 +124,6 @@
             this.lblObjetivo.Size = new System.Drawing.Size(45, 15);
             this.lblObjetivo.TabIndex = 2;
             this.lblObjetivo.Text = "METAS";
-            // 
-            // pbxObjetivo
-            // 
-            this.pbxObjetivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxObjetivo.Image = ((System.Drawing.Image)(resources.GetObject("pbxObjetivo.Image")));
-            this.pbxObjetivo.Location = new System.Drawing.Point(8, 12);
-            this.pbxObjetivo.Name = "pbxObjetivo";
-            this.pbxObjetivo.Size = new System.Drawing.Size(30, 30);
-            this.pbxObjetivo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxObjetivo.TabIndex = 1;
-            this.pbxObjetivo.TabStop = false;
             // 
             // pnlRegistro
             // 
@@ -174,17 +150,6 @@
             this.lblRegistro.TabIndex = 2;
             this.lblRegistro.Text = "REGISTRO";
             // 
-            // pbxRegistro
-            // 
-            this.pbxRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxRegistro.Image = ((System.Drawing.Image)(resources.GetObject("pbxRegistro.Image")));
-            this.pbxRegistro.Location = new System.Drawing.Point(8, 12);
-            this.pbxRegistro.Name = "pbxRegistro";
-            this.pbxRegistro.Size = new System.Drawing.Size(30, 30);
-            this.pbxRegistro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxRegistro.TabIndex = 1;
-            this.pbxRegistro.TabStop = false;
-            // 
             // pnlExercicio
             // 
             this.pnlExercicio.Controls.Add(this.lblExercicio);
@@ -210,20 +175,9 @@
             this.lblExercicio.TabIndex = 2;
             this.lblExercicio.Text = "EXERCÍCIOS";
             // 
-            // pbxExercicio
-            // 
-            this.pbxExercicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxExercicio.Image = ((System.Drawing.Image)(resources.GetObject("pbxExercicio.Image")));
-            this.pbxExercicio.Location = new System.Drawing.Point(12, 12);
-            this.pbxExercicio.Name = "pbxExercicio";
-            this.pbxExercicio.Size = new System.Drawing.Size(30, 30);
-            this.pbxExercicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxExercicio.TabIndex = 1;
-            this.pbxExercicio.TabStop = false;
-            // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(24)))));
             this.pnlMenu.Controls.Add(this.lblMenu);
             this.pnlMenu.Controls.Add(this.pbxMenu);
             this.pnlMenu.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -244,6 +198,59 @@
             this.lblMenu.TabIndex = 3;
             this.lblMenu.Text = "MENU";
             // 
+            // pnlForms
+            // 
+            this.pnlForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(24)))));
+            this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlForms.Location = new System.Drawing.Point(181, 0);
+            this.pnlForms.Name = "pnlForms";
+            this.pnlForms.Size = new System.Drawing.Size(498, 476);
+            this.pnlForms.TabIndex = 6;
+            // 
+            // pbxConfiguracao
+            // 
+            this.pbxConfiguracao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxConfiguracao.Image = ((System.Drawing.Image)(resources.GetObject("pbxConfiguracao.Image")));
+            this.pbxConfiguracao.Location = new System.Drawing.Point(8, 12);
+            this.pbxConfiguracao.Name = "pbxConfiguracao";
+            this.pbxConfiguracao.Size = new System.Drawing.Size(30, 30);
+            this.pbxConfiguracao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxConfiguracao.TabIndex = 1;
+            this.pbxConfiguracao.TabStop = false;
+            // 
+            // pbxObjetivo
+            // 
+            this.pbxObjetivo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxObjetivo.Image = ((System.Drawing.Image)(resources.GetObject("pbxObjetivo.Image")));
+            this.pbxObjetivo.Location = new System.Drawing.Point(8, 12);
+            this.pbxObjetivo.Name = "pbxObjetivo";
+            this.pbxObjetivo.Size = new System.Drawing.Size(30, 30);
+            this.pbxObjetivo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxObjetivo.TabIndex = 1;
+            this.pbxObjetivo.TabStop = false;
+            // 
+            // pbxRegistro
+            // 
+            this.pbxRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxRegistro.Image = ((System.Drawing.Image)(resources.GetObject("pbxRegistro.Image")));
+            this.pbxRegistro.Location = new System.Drawing.Point(8, 12);
+            this.pbxRegistro.Name = "pbxRegistro";
+            this.pbxRegistro.Size = new System.Drawing.Size(30, 30);
+            this.pbxRegistro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxRegistro.TabIndex = 1;
+            this.pbxRegistro.TabStop = false;
+            // 
+            // pbxExercicio
+            // 
+            this.pbxExercicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxExercicio.Image = ((System.Drawing.Image)(resources.GetObject("pbxExercicio.Image")));
+            this.pbxExercicio.Location = new System.Drawing.Point(12, 12);
+            this.pbxExercicio.Name = "pbxExercicio";
+            this.pbxExercicio.Size = new System.Drawing.Size(30, 30);
+            this.pbxExercicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxExercicio.TabIndex = 1;
+            this.pbxExercicio.TabStop = false;
+            // 
             // pbxMenu
             // 
             this.pbxMenu.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -258,22 +265,12 @@
             this.pbxMenu.MouseEnter += new System.EventHandler(this.pbxMenu_MouseEnter);
             this.pbxMenu.MouseLeave += new System.EventHandler(this.pbxMenu_MouseLeave);
             // 
-            // pnlForms
-            // 
-            this.pnlForms.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlForms.Location = new System.Drawing.Point(181, 0);
-            this.pnlForms.Name = "pnlForms";
-            this.pnlForms.Size = new System.Drawing.Size(704, 495);
-            this.pnlForms.TabIndex = 6;
-            this.pnlForms.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlForms_Paint);
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(885, 495);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(48)))), ((int)(((byte)(24)))));
+            this.ClientSize = new System.Drawing.Size(679, 476);
             this.Controls.Add(this.pnlForms);
             this.Controls.Add(this.pnlBotoes);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -287,18 +284,18 @@
             this.pnlBotoes.ResumeLayout(false);
             this.pnlConfiguracao.ResumeLayout(false);
             this.pnlConfiguracao.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxConfiguracao)).EndInit();
             this.pnlObjetivo.ResumeLayout(false);
             this.pnlObjetivo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxObjetivo)).EndInit();
             this.pnlRegistro.ResumeLayout(false);
             this.pnlRegistro.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxRegistro)).EndInit();
             this.pnlExercicio.ResumeLayout(false);
             this.pnlExercicio.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxExercicio)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxConfiguracao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxObjetivo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxRegistro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxExercicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMenu)).EndInit();
             this.ResumeLayout(false);
 

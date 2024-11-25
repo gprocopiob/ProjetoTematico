@@ -156,7 +156,7 @@ namespace NutriFlow.Forms
         }
         public void ChangeForeColor(bool isMouseIn, params Control[] controls)
         {
-            Color color = isMouseIn ? Color.FromArgb(70, 130, 180) : Color.FromArgb(0, 0, 100);
+            Color color = isMouseIn ? Color.FromArgb(69, 133, 94) : Color.FromArgb(8, 48, 24);
 
             foreach (var control in controls)
             {
@@ -258,21 +258,6 @@ namespace NutriFlow.Forms
         private void frmMenu_Load(object sender, EventArgs e)
         {
             FormShow(typeof(frmInformacao), email);
-        }
-
-        private void pnlForms_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnlObjetivo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnlConfiguracao_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

@@ -25,7 +25,7 @@ namespace NutriFlow.Connection
             {
                 bool success = false;
 
-                string query = "INSERT INTO CADASTRO (ID, NOME, SOBRENOME, GENERO, EMAIL, SENHA) VALUES (@id, @nome, @sobrenome, @genero, @email, @senha)";
+                string query = "INSERT INTO CADASTRO (NOME, SOBRENOME, GENERO, EMAIL, SENHA) VALUES (@nome, @sobrenome, @genero, @email, @senha)";
 
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
@@ -33,7 +33,6 @@ namespace NutriFlow.Connection
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@id", user.Id);
                         command.Parameters.AddWithValue("@nome", user.Nome);
                         command.Parameters.AddWithValue("@sobrenome", user.Sobrenome);
                         command.Parameters.AddWithValue("@genero", user.Genero);
@@ -49,11 +48,10 @@ namespace NutriFlow.Connection
             }
         }
 
-        public int GetLastID()
+        public bool EmailExistente(string email)
         {
-            int id = 0;
-
-            string query = "SELECT ISNULL(MAX(ID), 0) FROM CADASTRO";
+            bool existe = false;
+            string query = "SELECT COUNT(*) FROM CADASTRO WHERE EMAIL = @Email";
 
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
@@ -61,13 +59,14 @@ namespace NutriFlow.Connection
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    object result = command.ExecuteScalar();
+                    command.Parameters.AddWithValue("@Email", email);
 
-                    id = Convert.ToInt32(result);
+                    int count = (int)command.ExecuteScalar();
+                    existe = count > 0;
                 }
             }
 
-            return id + 1;
+            return existe;
         }
-    }
+    }    
 }

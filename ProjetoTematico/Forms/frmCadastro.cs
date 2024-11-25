@@ -13,7 +13,8 @@ namespace ProjetoTematico.Forms
         private ConnectionCadastro Connection = new ConnectionCadastro();
         private ValidationCadastro Validation = new ValidationCadastro();
         private string email;
-        public frmCadastro()
+
+        public frmCadastro(string email)
         {
             InitializeComponent();
             this.email = email;
@@ -60,7 +61,7 @@ namespace ProjetoTematico.Forms
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            ObjectUser user = GetUser();
+            ObjectUser user = new ObjectUser(txbNome.Text, txbSobrenome.Text, cmbGenero.Text, txbEmail.Text, txbSenha.Text);
 
             if (Validation.IsUserNull(user))
             {
@@ -73,6 +74,10 @@ namespace ProjetoTematico.Forms
             else if (!Validation.IsEmailValido(user.Email))
             {
                 SetLoginInvalido("Email inválido", false);
+            }
+            else if (Connection.EmailExistente(user.Email))
+            {
+                SetLoginInvalido("Email já cadastrado.", true);
             }
             else
             {
@@ -101,35 +106,6 @@ namespace ProjetoTematico.Forms
                         MessageBox.Show($"Erro ao realizar cadastro.{Environment.NewLine}Detalhes do erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            }
-        }
-
-        private ObjectUser GetUser()
-        {
-            try
-            {
-
-                string nome = txbNome.Text;
-                string sobrenome = txbSobrenome.Text;
-                string genero = cmbGenero.Text;
-                string email = txbEmail.Text;
-                string senha = txbSenha.Text;
-
-                ObjectUser user = null;
-
-                // TODO: CRIAR FUNCAO GETEMAIL, QUE PESQUISA PELO EMAIL INFORMADO (TOUPPER)
-
-                //{
-                //    user = new ObjectUser(nome, sobrenome, genero, email, senha);
-                //}
-
-                return user;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao obter índex de tabela.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                return null;
             }
         }
 
