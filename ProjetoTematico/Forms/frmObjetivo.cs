@@ -194,7 +194,7 @@ namespace NutriFlow.Forms
         }
         private void ShowButton(Button btnMostrar, Button btnOcultar)
         {
-            btnMostrar.Location = new Point(261, 445);
+            btnMostrar.Location = new Point(150, 441);
             btnMostrar.Visible = true;
             btnOcultar.Location = new Point(12, 445);
             btnOcultar.Visible = false;
@@ -221,6 +221,11 @@ namespace NutriFlow.Forms
             {
                 MessageBox.Show($"Erro ao alterar objetivos.{Environment.NewLine}{Environment.NewLine}Detalhes do Erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

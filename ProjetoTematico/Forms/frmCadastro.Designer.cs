@@ -60,8 +60,9 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(133)))), ((int)(((byte)(94)))));
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoltar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(133)))), ((int)(((byte)(94)))));
             this.btnVoltar.ForeColor = System.Drawing.Color.White;
             this.btnVoltar.Location = new System.Drawing.Point(-1, 1);
             this.btnVoltar.Name = "btnVoltar";
@@ -149,8 +150,7 @@
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Items.AddRange(new object[] {
             "Feminino",
-            "Masculino",
-            "Não-Binário"});
+            "Masculino"});
             this.cmbGenero.Location = new System.Drawing.Point(44, 194);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(266, 23);
@@ -168,8 +168,9 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(133)))), ((int)(((byte)(94)))));
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(133)))), ((int)(((byte)(94)))));
             this.btnCadastrar.Location = new System.Drawing.Point(101, 410);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(141, 38);
@@ -209,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(99)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(351, 464);
             this.Controls.Add(this.txbConfirmacaoSenha);
             this.Controls.Add(this.txbSenha);

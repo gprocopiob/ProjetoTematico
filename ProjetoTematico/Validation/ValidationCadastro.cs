@@ -1,10 +1,6 @@
-﻿using NutriFlow.Objects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System; 
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
+using NutriFlow.Objects;
 
 namespace NutriFlow.Validation
 {
@@ -19,7 +15,7 @@ namespace NutriFlow.Validation
         {
             bool isUserFilled = false;
 
-            if (user.Id != 0 && user.Nome != "" && user.Sobrenome != "" && user.Genero != "" && user.Email != "" && user.Senha != "")
+            if (user.Nome != "" && user.Sobrenome != "" && user.Genero != "" && user.Email != "" && user.Senha != "")
             {
                 isUserFilled = true;
             }
